@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
+
+//route
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,11 +25,7 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/about-us', function () {
-    $company = 'Tasty Fortune';
-    return view('about-us', [
-        'company' => $company
-    ]);
-})->name('about-us');
+Route::get('/about-us', [AboutUsController::class, 'index'])
+    ->name('about-us');
 
 require __DIR__ . '/auth.php';
