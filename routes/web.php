@@ -26,4 +26,6 @@ Route::get('/about', [AboutUsController::class, 'index'])->name('about');
 
 Route::view('/contact', 'contact')->name('contact');
 
+Route::view('/history', 'history')->name('history');
+
 require __DIR__ . '/auth.php';

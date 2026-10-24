@@ -1,3 +1,7 @@
 <x-layout title="Home">
-    <h1>Hello, World!</h1>
+    @auth
+        <p>Welcome back, {{ Auth::user()->name }}!</p>
+    @else
+        <p>Welcome! Open a fortune cookie to discover your message.</p>
+    @endauth
 </x-layout>
