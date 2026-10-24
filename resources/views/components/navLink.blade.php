@@ -1,3 +1,10 @@
 {{--custom nav link--}}
 
-<a {{ $attributes }} class="">{{ $slot }}</a>
+@props(['active' => false])
+
+<a
+    {{ $attributes }}
+    class="{{ $active ? 'text-red' : '' }}"
+>
+    {{ $slot }}
+</a>

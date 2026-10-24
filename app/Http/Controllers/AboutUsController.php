@@ -11,7 +11,7 @@ class AboutUsController extends Controller
         $company = 'Tasty Fortune';
         $description = 'We make delicious treats for every occasion.';
 
-        return view('about-us', [
+        return view('about', [
             'company' => $company,
             'description' => $description,
         ]);

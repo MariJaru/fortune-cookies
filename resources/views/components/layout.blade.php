@@ -15,10 +15,7 @@
     </style>
 </head>
 <body>
-@include(partials.navigation)
-
-@props(['active' => false])
-<a {{ $attributes }} class="{{ $active ? 'text-red' : '' }}">{{ $slot }}</a>
+@include('partials.navigation')
 
 <main>
     {{ $slot }}
