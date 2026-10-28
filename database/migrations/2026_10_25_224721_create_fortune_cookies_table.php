@@ -13,7 +13,6 @@ return new class extends Migration {
         Schema::create('fortune_cookies', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('new_users')->onDelete('cascade');
             $table->text('message');
             $table->timestamps();
         });

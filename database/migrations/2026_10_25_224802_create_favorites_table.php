@@ -14,8 +14,8 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('user_id')->constrained('new_users')->onDelete('cascade');
             $table->foreignId('fortune_cookie_id')->constrained('fortune_cookies')->onDelete('cascade');
-            $table->timestamp('saved_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('saved_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
